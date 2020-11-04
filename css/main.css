@@ -1,0 +1,250 @@
+:root {
+  /* Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /* accent */
+  --blue: hsl(248, 32%, 49%);
+  /*  Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  /*  Font & Typo */
+  --medium-fnt: 4rem;
+  --normal-fnt: 2.5rem;
+  --small-fnt: 1.6rem;
+  --xsmall-fnt: 1.4rem;
+  --xxsmall-fnt: 1.3rem;
+  --bold-fnt: 700;
+  --semibold-fnt: 600;
+  --regular-fnt: 500;
+  --light-fnt: 400;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --medium-fnt: 3.4rem;
+    --normal-fnt: 2rem;
+    --small-fnt: 1.4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --medium-fnt: 5rem;
+    --normal-fnt: 3rem;
+    --small-fnt: 1.8rem;
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--light-fnt);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: var(--red);
+  background-image: url(../images/bg-intro-mobile.png);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png) center center;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.main > div {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.main__header h1 {
+  line-height: 1;
+  color: #fff;
+  font-size: var(--medium-fnt);
+}
+
+.main__header p {
+  font-weight: var(--regular-fnt);
+  font-size: var(--small-fnt);
+  color: #e8e7e7;
+  margin: 2rem 0;
+  max-width: 500px;
+}
+
+.main__container {
+  max-width: 500px;
+}
+
+.main__container .info {
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  background-color: var(--blue);
+  color: #fff;
+  font-size: var(--xsmall-fnt);
+  text-align: center;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.22);
+}
+
+.main__container .info span {
+  font-weight: var(--bold-fnt);
+}
+
+.main__container .info p {
+  font-weight: var(--light-fnt);
+  color: #e8e7e7;
+}
+
+.main__container .form {
+  margin-top: 2rem;
+  padding: 2.5rem 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.22);
+}
+footer p{
+  text-align: center;
+  padding: 2em 0;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .main__container .form {
+    padding: 2.5rem;
+  }
+}
+
+.main__container .form .form-input {
+  position: relative;
+}
+
+.main__container .form .form-input input {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  outline: none;
+  border: 1px solid var(--grayish-blue);
+  border-radius: 5px;
+  font-size: var(--xxsmall-fnt);
+  font-weight: var(--semibold-fnt);
+  font-family: "Poppins", sans-serif;
+}
+
+.main__container .form .form-input input:focus {
+  border-color: var(--blue);
+}
+
+.main__container .form .form-input span {
+  display: none;
+  position: absolute;
+  right: 3%;
+  top: 105%;
+  color: var(--red);
+  text-align: right;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: var(--semibold-fnt);
+}
+
+.main__container .form .form-input .error-img {
+  display: none;
+  width: 22px;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main__container .form .form-input.error input {
+  border-color: var(--red);
+}
+
+.main__container .form .form-input.error span {
+  display: block;
+}
+
+.main__container .form .form-input.error .error-img {
+  display: block;
+}
+
+.main__container .form button {
+  width: 100%;
+  background-color: var(--green);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 2rem;
+  font-weight: var(--bold-fnt);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main__container .form button:active {
+  opacity: 0.7;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.261);
+}
+
+.main__container .form p {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  font-size: var(--xxsmall-fnt);
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+.main__container .form p a {
+  color: var(--red);
+}
+
+.main__container .form p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 5rem 0;
+    flex-direction: column;
+  }
+  .main__header {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
